@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://bootstrap-tagsinput.github.io/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Mandali&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(rgb(255,255,255,.75), rgb(255,255,255,.95)), url(https://cdn.pixabay.com/photo/2017/04/22/00/14/universe-2250310_960_720.jpg);
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+        }
+        h1, h2, h3 {
+            font-family: 'Fredericka the Great', cursive;
+            color: mediumvioletred;
+            text-shadow: 1px 2px 3px rgb(0,0,0,.5);
+        }
+        a, button {
+            font-family: 'Fredericka the Great', cursive;
+            text-shadow: 1px 2px 3px rgb(0,0,0,.5);
+        }
+        p, span {
+            font-family: 'Mandali', sans-serif;
+        }
+       /* .picbox {
+            border: 2px solid #000;
+            width: 10rem;
+            height: 9rem;
+        } */
+        .container {
+            height: auto;
+            padding: 3rem;
+        }
+        .inStyle {
+            border: none;
+            margin-bottom: 1.1rem;
+            padding: .75rem;
+            border-radius: 10px;
+        }
+        .btn-success {
+            margin: 2rem 2rem;
+            color: #fff;
+            background-color: mediumorchid;
+            border-color: mediumorchid;
+            box-shadow: 1px 2px 3px rgb(0,0,0,.5);
+
+        }
+        .btn-success:hover {
+            background-color: mediumpurple;
+            border-color: mediumpurple;
+            position: relative;
+            top: -2px;
+            box-shadow: 1px 2px 5px rgb(0,0,0,.75);
+            transition: .5s;
+        }
+        #bio {
+            border: none;
+            border-radius: 10px;
+            padding: .75rem;
+        }
+        
+    </style>
+    <title>Create Profile</title>
+</head>
+
+<body>
+
+    <main class="create view">
+    <section class="top">
+        <div class="container">
+        <a href="/home" class="btn btn-success">Go Back Home</a>
+            <div class="row flex-column justify-content-center align-content-center">
+            <h1 class="text-center">Create Your Profile!</h1><br><br>
+                <p>Fill out the form below to create your profile.</p><br><br>
+                <div class="col-lg-7">
+                    
+                    </div>
+                   <!-- <div class="col-lg-5">
+                        <div class="picbox">
+                            <//?php echo $picture; ?>
+                        </div>
+                    </div>-->
+                    <form action="create/submit" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <!--<label>Upload a profile picture</label>
+                        <input type="file" name="picture" action="create/upload"><br><br>-->
+                        <label>Tell us your first and last name</label><br>
+                        <input type="text" name="fname" class="inStyle" placeholder="First Name" required><br>
+                        <input type="text" name="lname" class="inStyle" placeholder="Last Name" required><br><br>
+                        <label>Choose your birthday</label><br>
+                        <input type="date" name="birthday" class="inStyle" placeholder="Date of Birth" required><br><br>
+                        <label>Write a quick bio about yourself</label><br>
+                        <textarea name="shortbio" rows="10" cols="50" id="bio" placeholder="There's a lot about me..." required></textarea><br><br>
+                        <label>What are your interests?</label>
+                        <input type="text" name="interests" class="inStyle" data-role="tagsinput" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-success">Submit</button>
+
+                </form>
+            </div>
+        </div>
+    </section>
+    </main>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://bootstrap-tagsinput.github.io/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+</html>
